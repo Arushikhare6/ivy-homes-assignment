@@ -3,12 +3,12 @@
   "candidate": {
     "name": "Arushi Khare",
     "email": "arushi.khare@mnnit.ac.in",
-    "repo_url": "https://github.com/arushikhare/ivy-homes-assignment",
-    "demo_url": "https://ivy-homes-assignment.vercel.app"
+    "repo_url": "https://github.com/Arushikhare6/ivy-homes-assignment",
+    "demo_url": "https://ivy-homes-assignment-1luxujw2h-arushi15.vercel.app/"
   },
   "answers": {
     "total_listing_records": 4100,
-    "unique_properties": 4099,
+    "unique_properties": 4074,
     "active_listings": 3233,
     "corrupt_listing_ids": [
       "100-4000050",

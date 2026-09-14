@@ -1,0 +1,91 @@
+{
+  "city": "chennai",
+  "total_listings": 3225,
+  "total_records_retrieved": 4100,
+  "median_price": 10240000,
+  "median_price_per_sqft": 9929,
+  "by_locality": [
+    {
+      "locality": "guindy",
+      "count": 357,
+      "median_price": 9740000
+    },
+    {
+      "locality": "velachery",
+      "count": 341,
+      "median_price": 10100000
+    },
+    {
+      "locality": "anna nagar",
+      "count": 340,
+      "median_price": 10050000
+    },
+    {
+      "locality": "thoraipakkam",
+      "count": 339,
+      "median_price": 10490000
+    },
+    {
+      "locality": "t nagar",
+      "count": 337,
+      "median_price": 10540000
+    },
+    {
+      "locality": "porur",
+      "count": 327,
+      "median_price": 10690000
+    },
+    {
+      "locality": "perungudi",
+      "count": 310,
+      "median_price": 10515000
+    },
+    {
+      "locality": "adyar",
+      "count": 304,
+      "median_price": 10060000
+    },
+    {
+      "locality": "omr",
+      "count": 291,
+      "median_price": 10020000
+    },
+    {
+      "locality": "tambaram",
+      "count": 279,
+      "median_price": 10440000
+    }
+  ],
+  "by_bhk": [
+    {
+      "bedroom": 0,
+      "count": 114,
+      "median_price": 10770000
+    },
+    {
+      "bedroom": 1,
+      "count": 265,
+      "median_price": 4610000
+    },
+    {
+      "bedroom": 2,
+      "count": 1093,
+      "median_price": 8130000
+    },
+    {
+      "bedroom": 3,
+      "count": 1142,
+      "median_price": 11745000
+    },
+    {
+      "bedroom": 4,
+      "count": 456,
+      "median_price": 15410000
+    },
+    {
+      "bedroom": 5,
+      "count": 155,
+      "median_price": 18150000
+    }
+  ]
+}

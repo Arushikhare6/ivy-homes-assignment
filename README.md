@@ -1,16 +1,17 @@
 # Ivy Homes Property API — Software Engineering Internship Submission
 
 **Candidate**: Arushi Khare  
-**Email**: arushi.khare@mnnit.ac.in  
 **City**: Chennai  
 **Assigned Locality**: T Nagar  
+**Live Deployment**: [https://ivy-homes-assignment-1luxujw2h-arushi15.vercel.app/](https://ivy-homes-assignment-1luxujw2h-arushi15.vercel.app/)  
+**GitHub Repository**: [https://github.com/Arushikhare6/ivy-homes-assignment](https://github.com/Arushikhare6/ivy-homes-assignment)  
 
 ---
 
 ## Overview
 
 This repository contains the complete solution for the Ivy Homes Software Engineering Internship Assignment (September 2026). It consists of:
-1. **Part 1 — Frontend Web Application**: A modern, high-performance React application built with Vite, Vanilla CSS, and custom glassmorphism design system. Fully supports demo logins, listing browsing, filtering, listing details, saved favourites per user, rentals, builder projects with unit corrections, and an interactive Insights & API Audit screen.
+1. **Part 1 — Frontend Web Application**: A modern, high-performance React application built with Vite, Vanilla CSS, and custom glassmorphism design system. Live on Vercel at [https://ivy-homes-assignment-1luxujw2h-arushi15.vercel.app/](https://ivy-homes-assignment-1luxujw2h-arushi15.vercel.app/). Fully supports demo logins, listing browsing, filtering, listing details, saved favourites per user, rentals, builder projects with unit corrections, and an interactive Insights & API Audit screen.
 2. **Part 2 — Ten Calculated Answers**: Mathematically precise answers for City **Chennai** anchored at `REFERENCE = 2026-09-10T00:00:00+05:30 (IST)`.
 3. **Part 3 — List the Lies**: 18 empirical documentation discrepancy findings documented in `submission.json` across 13 required categories (`auth`, `pagination`, `units`, `filters`, `sorting`, `timestamps`, `duplicates`, `data_quality`, `fraud`, `consistency`, `missing_endpoint`, `undocumented_endpoint`).
 
