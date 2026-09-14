@@ -4,16 +4,26 @@
 **Email**: arushi.khare@mnnit.ac.in  
 **City**: Chennai  
 **Assigned Locality**: T Nagar  
-**API Key**: `IVY26-F90E52596CBD`  
 
 ---
 
 ## Overview
 
 This repository contains the complete solution for the Ivy Homes Software Engineering Internship Assignment (September 2026). It consists of:
-1. **Part 1 — Frontend Web Application**: A modern, high-performance React application built with Vite, Vanilla CSS, and custom glassmorphism design system. Fully supports demo login accounts (`demo1@ivy.homes`, `demo2@ivy.homes`, `demo3@ivy.homes` with password `5ec43320d2`), listing browsing, filtering, listing details, saved favourites per user, rentals, builder projects with unit corrections, and an interactive Insights & API Audit screen.
+1. **Part 1 — Frontend Web Application**: A modern, high-performance React application built with Vite, Vanilla CSS, and custom glassmorphism design system. Fully supports demo logins, listing browsing, filtering, listing details, saved favourites per user, rentals, builder projects with unit corrections, and an interactive Insights & API Audit screen.
 2. **Part 2 — Ten Calculated Answers**: Mathematically precise answers for City **Chennai** anchored at `REFERENCE = 2026-09-10T00:00:00+05:30 (IST)`.
 3. **Part 3 — List the Lies**: 18 empirical documentation discrepancy findings documented in `submission.json` across 13 required categories (`auth`, `pagination`, `units`, `filters`, `sorting`, `timestamps`, `duplicates`, `data_quality`, `fraud`, `consistency`, `missing_endpoint`, `undocumented_endpoint`).
+
+---
+
+## Environment Variables & Configuration
+
+Create a `.env` file in the root directory (refer to `.env.example`):
+
+```env
+VITE_API_KEY=YOUR_API_KEY_HERE
+VITE_API_BASE_URL=https://solve.ivy.homes
+```
 
 ---
 
@@ -27,7 +37,7 @@ This repository contains the complete solution for the Ivy Homes Software Engine
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/arushikhare/ivy-homes-assignment.git
+git clone https://github.com/Arushikhare6/ivy-homes-assignment.git
 cd ivy-homes-assignment
 
 # 2. Install dependencies
@@ -76,45 +86,20 @@ We approached the API as an honest running service while treating `API_REFERENCE
 
 ## What We Checked That Turned Out to Be Fine
 
-Hypotheses that did **not** pan out tell us more about data integrity than the ones that did:
-
 1. **Hypothesis: Health Endpoint Discrepancies**:
-   - *Idea*: `/health` might require authentication or return non-200 status under load.
    - *Finding*: `/health` is unauthenticated, lightweight, and consistently returns `200 OK` with service status and server timestamp.
 
 2. **Hypothesis: Portal Domain Spoofing**:
-   - *Idea*: `listing_url` domains for portals (`magichomes`, `100acres`, `dwelling`, `squarelane`, `zerobroker`) might point to malicious or mismatched domains.
    - *Finding*: Every single `listing_url` maps 1-to-1 to its legitimate domain name.
 
 3. **Hypothesis: Locality Query Filtering**:
-   - *Idea*: Locality parameter filtering on `/v1/listings` might fail or ignore case sensitivity.
    - *Finding*: Server-side `locality` filter works accurately for valid locality strings.
 
 4. **Hypothesis: Bedroom (BHK) and Furnishing Server Filters**:
-   - *Idea*: Server might ignore `bhk` or `furnishing` query parameters like it did for `page`.
    - *Finding*: `bhk` and `furnishing` query parameters strictly filter matching records on `/v1/listings`.
 
 5. **Hypothesis: Rental Price Unit Corruption**:
-   - *Idea*: Rental `price` or `deposit` values might be expressed in thousands or lakhs instead of rupees.
    - *Finding*: Rental monthly rent (`price`) and security deposit (`deposit`) are consistently expressed in integer Indian Rupees.
-
----
-
-## What We Would Do With Another Two Days
-
-If granted another two days, we would implement:
-
-1. **Automated OpenAPI / Swagger Spec Generator**:
-   - Build a lightweight proxy layer that observes live API traffic, auto-generates corrected OpenAPI 3.0 schemas, and flags documentation drift in CI/CD pipelines.
-
-2. **Interactive Spatial Map View**:
-   - Integrate Mapbox GL / Leaflet JS with spatial clustering to display properties across Chennai localities with real-time price heatmap overlays.
-
-3. **Automated E2E Test Suite**:
-   - Add Playwright E2E tests covering token refresh under 15-minute expiration, offline session persistence, and data quality filtering toggles.
-
-4. **Real-time WebSockets / Server-Sent Events (SSE)**:
-   - Implement simulated real-time price update notifications and inventory status alerts when properties transition to withdrawn/inactive.
 
 ---
 
@@ -122,4 +107,5 @@ If granted another two days, we would implement:
 
 - `submission.json`: Main submission artifact containing candidate metadata, the 10 calculated answers, and the 18 discrepancy findings.
 - `src/`: Complete source code for Vite + React web application.
+- `.env.example`: Template environment file.
 - `scratch/`: Diagnostic scripts used to scrape, audit, and calculate answers empirically.

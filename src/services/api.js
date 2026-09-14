@@ -1,5 +1,5 @@
-const BASE_URL = 'https://solve.ivy.homes';
-const API_KEY = 'IVY26-F90E52596CBD';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://solve.ivy.homes';
+const API_KEY = import.meta.env.VITE_API_KEY || 'IVY26-F90E52596CBD';
 
 // In-Memory Data Cache to make tab navigation 0ms instant
 const dataCache = {
@@ -229,7 +229,6 @@ export const fetchAllListings = async (forceRefresh = false) => {
   const tokens = getStoredTokens();
   if (!tokens?.access_token && !tokens?.token) return [];
 
-  // Fetch page 1 immediately
   const firstBatch = await fetchListingsBatch(0, 50);
   const total = firstBatch.total || 4100;
   const results = [...(firstBatch.results || [])];
@@ -239,7 +238,6 @@ export const fetchAllListings = async (forceRefresh = false) => {
     offsets.push(off);
   }
 
-  // Execute parallel requests in batches of 12 concurrent HTTP calls
   const batchSize = 12;
   for (let i = 0; i < offsets.length; i += batchSize) {
     const chunk = offsets.slice(i, i + batchSize);
